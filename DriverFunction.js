@@ -42,7 +42,7 @@ export function output(command) {
             "cls: clears the terminal\n" +
             "exit: closes the page";
     }
-    switch (spellcheck(command.substring(0, command.indexOf(" "))), dictCommands) {
+    switch (spellcheck(command.substring(0, command.indexOf(" ")), dictCommands)) {
         case "print":
             //return
             return cmdPrint();
