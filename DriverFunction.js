@@ -4,8 +4,9 @@ export function output(command) {
 
     const dictName = [[["arcana"], ["empress", "empress's grace"], ["emperor"], ["sorc"], ["co", "CO"], ["bt", "BT"], ["destro"], ["rh", "RH"], ["gt", "GT"], ["red", "redlancer"], ["blue", "bluelancer"], ["shock"], ["taijutsu", "tai"], ["EO", "eo"], ["wd", "WD"], ["ese", "ESE"], ["fi", "FI"], ["arti"], ["barrage"], ["fpe", "FPE"], ["de", "DE"], ["ew", "EW"], ["gs", "GS"], ["tth", "TTH"], ["pm", "PM"], ["machinist"], ["arthetinean skill"], ["evolutionary legacy"], ["ss", "SS"], ["lc", "LC"], ["lunar"], ["sh", "SH"], ["di", "DI"], ["ps", "PS"], ["se", "SE"], ["ne", "NE"], ["full moon", "fm", "FM", "fmh", "FMH"], ["aero"], ["wf", "WF", "windfury"], ["db", "DB"]], ["arcanist", "empress' grace", "order of the emperor", "sorceress", "communication overflow", "berserker's technique", "destroyer", "rage hammer", "gravity training", "lone knight", "combat readiness", "shock training", "taijutsu", "energy overflow", "wardancer", "esoteric skill enhancement", "first intention", "artillerist", "barrage enhancement", "firepower enhancement", "deadeye", "enhanced weapon", "gunslinger", "time to hunt", "peacemaker", "scouter", "AT", "evo", "sharpshooter", "loyal companion", "lunar voice", "shadowhunter", "demonic impulse", "perfect suppression", "souleater", "night's edge", "full moon harvester", "aeromancer", "wind fury", "deathblade"]];
     const dictArgs = [[["e", "eng", "engs"]], ["engravings"]];
-    const dictEngs = [[["hm"], ["cd"], ["kbw", "keen blunt"], ["doe", "DOE"], ["aoa", "AOA", "all-out attack"], ["barri"], ["vph, VPH"], ["rc", "RC"], ["ep", "EP"], ["mb", "MB"], ["mi", "MI", "mass", "increase mass"]], ["hit master", "cursed doll", "keen blunt weapon", "drops of ether", "all out attack", "barricade", "vital point hit", "raid captain", "ether predator", "master brawler", "mass increase"]];
+    const dictEngs = [[["hm"], ["cd"], ["kbw", "keen blunt"], ["doe", "DOE"], ["aoa", "AOA", "all-out attack"], ["barri"], ["vph, VPH"], ["rc", "RC"], ["ep", "EP"], ["mb", "MB"], ["mi", "MI", "mass", "increase mass"], ["am", "AM"]], ["hit master", "cursed doll", "keen blunt weapon", "drops of ether", "all out attack", "barricade", "vital point hit", "raid captain", "ether predator", "master brawler", "mass increase", "ambush master"]];
     const dictStats = ["spec", "crit", "swift"];
+    const dictCommands = [[["s"], ["p"]], ["search", "print"]]
     if (command === "help") {
         return "print: print [subject] [options]\n" +
             "\tprints information about a spec or class\n" +
@@ -41,7 +42,7 @@ export function output(command) {
             "cls: clears the terminal\n" +
             "exit: closes the page";
     }
-    switch (command.substring(0, command.indexOf(" "))) {
+    switch (spellcheck(command.substring(0, command.indexOf(" "))), dictCommands) {
         case "print":
             //return
             return cmdPrint();
