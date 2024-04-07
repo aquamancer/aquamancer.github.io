@@ -8,7 +8,7 @@ export function output(command) {
     const dictStats = ["spec", "crit", "swift"];
     const dictCommands = [[["s"], ["p"]], ["search", "print"]]
     if (command === "help") {
-        return "print: print [subject] [options]\n" +
+        return "print: print,p [subject] [options]\n" +
             "\tprints information about a spec or class\n" +
             "\t\n" +
             "\tsubject (required):\n" +
@@ -25,7 +25,7 @@ export function output(command) {
             "\t\tprint sh\n" +
             "\t\tprint db engs\n" +
             "\n" +
-            "search: search [arg1] [arg2] [arg3...arg n]\n" +
+            "search: search,s [arg1] [arg2] [arg3...arg n]\n" +
             "\tsearch who uses engraving(s) and stat(s). useful for searching accessories\n" +
             "\n" +
             "\targs:\n" +
