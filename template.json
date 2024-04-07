@@ -1,0 +1,54 @@
+{
+  "className": "",
+  "nexusLink": "",
+  "lastUpdated": "",
+  "specs": [
+    {
+      "specName": "",
+      "stats": [
+        [
+          "",
+          ""
+        ], [
+          1500,
+          500
+        ]
+      ],
+      "engravings": [
+        [
+          ""
+        ], [
+          []
+        ]
+      ],
+      "builds": [
+        "5x3:\t",
+        "5x3+1:\t",
+        "5x3+2:\t"
+      ],
+      "notes": ""
+    }, {
+      "specName": "",
+      "stats": [
+        [
+          "",
+          ""
+        ], [
+          1500,
+          500
+        ]
+      ],
+      "engravings": [
+        [
+          ""
+        ], [
+          []
+        ]
+      ],
+      "builds": [
+        "5x3:\t"
+      ],
+      "notes": ""
+    }
+  ]
+}
